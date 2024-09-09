@@ -1,0 +1,57 @@
+{
+  "name": "mocha-issue-simulation",
+  "description": "mocha-issue-simulation",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack --mode production",
+    "format": "prettier --write .",
+    "lint": "eslint src/Core src/prod",
+    "prepare": "husky install",
+    "test": "mocha tests/**/*.test.js",
+    "ci-test": "mocha tests/**/*.test.js --forbid-only",
+    "coverage": "nyc mocha tests/**/*.test.js --timeout=3000"
+  },
+  "engines": {
+    "npm": ">=8.3.1",
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.7",
+    "babel-loader": "^8.2.3",
+    "chai": "^4.3.6",
+    "chai-dom": "^1.11.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.9.0",
+    "eslint-plugin-compat": "^4.0.2",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "jsdom": "^19.0.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^9.2.2",
+    "node-libcurl": "3.0.0",
+    "node-ssh": "^12.0.3",
+    "nyc": "^15.1.0",
+    "picocolors": "^1.0.0",
+    "prettier": "^2.5.1",
+    "sinon": "^13.0.2",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  },
+  "dependencies": {
+    "web-vitals": "^4.0.1",
+    "webpack-encoding-plugin": "^0.3.1"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ]
+}
